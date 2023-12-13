@@ -34,7 +34,7 @@ jobs:
     - name: debug
       run: |
         gpg -K
-        sops --decrypt fake-secret.enc.json
+        sops --decrypt --pgp 7BAE54F04229B19D7F559F260A861AE7F5DAF885 fake-secret.enc.json
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
