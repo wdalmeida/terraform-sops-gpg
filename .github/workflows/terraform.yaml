@@ -31,6 +31,10 @@ jobs:
         gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
         passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
+    - name: debug
+      run: |
+        gpg -K
+
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
