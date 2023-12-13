@@ -1,12 +1,12 @@
 terraform {
-    required_version = "1.6.6"
+  required_version = "1.6.6"
   required_providers {
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.6.0"
     }
     sops = {
-      source = "carlpett/sops"
+      source  = "carlpett/sops"
       version = "1.0.0"
     }
   }
@@ -26,7 +26,7 @@ resource "random_pet" "pet" {
 }
 
 output "fake-secret" {
-  value = data.sops_file.fake-secret.data["secret"]
+  value       = data.sops_file.fake-secret.data["secret"]
   description = "Fake secret content"
-  sensitive = true
+  sensitive   = true
 }
