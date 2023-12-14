@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: .*.json
+    pgp: 7BAE54F04229B19D7F559F260A861AE7F5DAF885
